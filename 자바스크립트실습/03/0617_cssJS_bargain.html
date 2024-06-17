@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>나이 계산하기</title>
+	<link rel="stylesheet" href="C:\Users\JIN. H KIM\Documents\GitHub\HTML_CSS-\자바스크립트_1\js-basic-new-main\03\css\bargain.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li>
+                <span>원래 가격</span>
+                <input id="oPrice"> 
+                <span>원</span>
+            </li>
+            <li>
+                <span>할인율</span>
+                <input id="dRate"> 
+                <span>%</span>
+            </li>
+            <li>
+                <button onclick="showPrice()"> 할인 가격 계산하기</button>
+            </li>
+        </ul>
+
+    </div>
+    <script>      
+        function showPrice( ) {
+             var originPrice = document.querySelector("#oPrice").value();
+             var discountRate = document.querySelector("#dRate").value();
+             var savedPrice = originPrice * (discountRate /100);
+             var resultPrice = originPrice - savedPrice;
+             document.querySelector("#showResult").innerHTML = "상품의 원래 가격은" + originPrice + "원이고, 할인율은 " + discountRate
+             "%입니다. " + savedPrice + "원을 절약한 " + resultPrice + "원에 살 수 있습니다.";       
+        }
+    </script>
+</body>
+</html>
