@@ -1,0 +1,22 @@
+<style>
+    div {
+        display: grid;
+        grid-template-columns: subgrid ;
+        
+    }
+
+    
+</style>
+<body>
+    <script>
+        for (var k=2; k<=10; k++) {
+            document.write('<div>')
+            document.write('<h1>'+k+'단 </h1>')
+                for (var i=1; i<9; i++) {
+                    document.write(k + 'X' + i + '=' + k*i + '<br>')
+                }
+        document.write('</div>')
+        }
+    </script>
+</body>
+
